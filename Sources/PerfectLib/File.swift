@@ -450,6 +450,7 @@ public extension File {
 		if readCount < bSize {
 			ary.removeLast(bSize - readCount)
 		}
+        
 		return ary
 	}
 
