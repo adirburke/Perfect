@@ -20,8 +20,10 @@
 
 import PackageDescription
 
+let package : Package
+
 #if os(Linux)
-let package = Package(
+package = Package(
 	name: "PerfectLib",
 	products: [
 		.library(name: "PerfectLib", targets: ["PerfectLib"])
@@ -33,7 +35,7 @@ let package = Package(
 	]
 )
 #else
-let package = Package(
+package = Package(
 	name: "PerfectLib",
 	platforms: [
 		.macOS(.v10_15)
